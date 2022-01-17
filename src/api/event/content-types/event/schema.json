@@ -21,23 +21,24 @@
       "target": "api::ticket.ticket",
       "mappedBy": "event"
     },
-    "Number_of_tickets": {
-      "type": "integer"
-    },
-    "tickets_available": {
-      "type": "integer"
-    },
     "date": {
       "type": "datetime"
     },
     "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "tickets_available": {
+      "type": "integer"
     }
   }
 }

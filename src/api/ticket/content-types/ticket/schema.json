@@ -18,11 +18,20 @@
       "target": "api::event.event",
       "inversedBy": "tickets"
     },
-    "seat_number": {
-      "type": "integer"
-    },
     "reference_number": {
       "type": "uid"
+    },
+    "seats_with": {
+      "type": "integer"
+    },
+    "seats_without": {
+      "type": "integer"
+    },
+    "total": {
+      "type": "decimal"
+    },
+    "total_seats": {
+      "type": "integer"
     }
   }
 }
