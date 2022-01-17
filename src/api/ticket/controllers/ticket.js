@@ -5,7 +5,6 @@
  */
 
 const { createCoreController } = require('@strapi/strapi').factories;
-// module.exports = createCoreController('api::ticket.ticket')
 
 module.exports = createCoreController('api::ticket.ticket', ({ strapi }) => ({
 
@@ -27,7 +26,7 @@ module.exports = createCoreController('api::ticket.ticket', ({ strapi }) => ({
         const event_update = await strapi.service('api::event.event').update(event_id, { data: {
             tickets_available: event.tickets_available - ctx.request.body.data.total_seats
         }})
-        
+
         return response;
       }
       
